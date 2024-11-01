@@ -1,0 +1,41 @@
+{
+  "name": "wallsio-gutenberg-block",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cgb-scripts start",
+    "build": "cgb-scripts build",
+    "eject": "cgb-scripts eject",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {
+    "@wordpress/blocks": "^6.0.6",
+    "@wordpress/components": "^7.0.6",
+    "@wordpress/compose": "^3.0.1",
+    "@wordpress/data": "^4.2.1",
+    "@wordpress/editor": "^9.0.8",
+    "@wordpress/element": "^2.1.9",
+    "@wordpress/i18n": "^3.1.1",
+    "@wordpress/jest-preset-default": "^3.0.3",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "cgb-scripts": "1.15.0",
+    "jest": "^23.6.0"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": []
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "cgb"
+    ]
+  }
+}

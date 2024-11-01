@@ -1,0 +1,150 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+$wallsioBlue: #00222d;
+$wallsioInputBorderColor: mix($wallsioBlue, white, 25%);
+$wallsioInputGroupBackground: #fafafa;
+$wallsioRed: #c64d40;
+
+$uiBorderColor: #8d96a0;
+$borderRadius: 3px;
+
+$firstBreak: 454px;
+
+.wp-block-wallsio-wallsio.wallsio-has-error {
+  min-height: 236px;
+}
+
+.wp-block-wallsio-wallsio .components-placeholder__fieldset {
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+}
+
+.wp-block-wallsio-wallsio .components-placeholder__fieldset form {
+  width: auto;
+}
+
+.wp-block-wallsio-wallsio .components-placeholder__fieldset button[type="submit"] {
+  margin-left: 8px;
+  margin-top: 5px;
+
+  @media (min-width: $firstBreak) {
+    margin-top: 0;
+  }
+}
+
+.wp-block-wallsio-wallsio .components-placeholder__label {
+  margin-bottom: 20px;
+}
+
+.wp-block-wallsio-wallsio .wallsio-input-group {
+  display: table;
+}
+
+.wp-block-wallsio-wallsio .wallsio-input-group-left {
+  display: flex;
+  height: 100%;
+}
+
+.wp-block-wallsio-wallsio .wallsio-input-group-addon {
+  padding: 7px 10px 3px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  line-height: 1;
+  color: $wallsioBlue;
+  text-align: center;
+  background-color: $wallsioInputGroupBackground;
+  border: 1px solid $wallsioInputBorderColor;
+
+  white-space: nowrap;
+
+  border-radius: $borderRadius;
+  border-color: $uiBorderColor;
+}
+
+.wp-block-wallsio-wallsio .wallsio-input-group-addon-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border-right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.wp-block-wallsio-wallsio .wallsio-input-group .wallsio-input {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 1%;
+  flex-grow: 1;
+  margin: 0; // Reverse WP style: `margin: 1px`
+}
+
+.wp-block-wallsio-wallsio .wallsio-input-group .wallsio-input-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.wp-block-wallsio-wallsio .wallsio-hint {
+  margin-top: 13px;
+  margin-bottom: 0;
+  text-align: left;
+  font-size: 12px;
+
+  @media (min-width: $firstBreak) {
+    font-size: 13px;
+  }
+}
+
+.wp-block-wallsio-wallsio .components-placeholder__error {
+  margin: 12px 0;
+  text-align: left;
+  color: $wallsioRed;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: inherit;
+
+  @media (min-width: $firstBreak) {
+    font-size: 13px;
+  }
+}
+
+.wp-block-wallsio-wallsio .wallsio-try-again {
+  color: $wallsioRed;
+  font-weight: 500;
+}
+
+.wallsio-wallsio-block-preview {
+  position: relative;
+}
+
+.wallsio-wallsio-block-preview iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wallsio-wallsio-input-info {
+  text-align: left;
+}
+
+// TODO maybe create a PR against the WordPress repo
+//.components-panel__row .components-base-control__label {
+//  max-width: none;
+//}
+
+.wallsio-components-panel__body .components-base-control__label {
+  max-width: none;
+}
